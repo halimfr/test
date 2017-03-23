@@ -22,6 +22,25 @@
 				href="javascript:formSubmit()"> Logout</a>
 		</h2>
 	</c:if>
+	
+	<h3>Users</h3>
+    <c:if  test="${!empty userList}">
+    <table class="data">
+    <tr>
+        <th>Username</th>
+        <th>Password</th>
+        <th>Enabled</th>
+    </tr>
+    <c:forEach items="${userList}" var="emp">
+        <tr>
+            <td>${emp.username} </td>
+            <td>${emp.password}</td>
+            <td>${emp.enabled}</td>
+        </tr>
+    </c:forEach>
+    </table>
+    </c:if>
+	
 
 </body>
 </html>

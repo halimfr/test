@@ -5,6 +5,8 @@
 <body>
 	<h1>Title : ${title}</h1>
 	<h1>Message : ${message}</h1>
+	<a href='/HelloWeb/login'>Login</a>
+	<a href='/HelloWeb/admin'>Admin</a>
 
 	<sec:authorize access="hasRole('ROLE_USER')">
 		<!-- For login user -->
